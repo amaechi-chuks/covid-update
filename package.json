@@ -1,5 +1,5 @@
 {
-  "homepage": "http://amaechi-chuks.github.io/COVID-19",
+  "homepage": "https://amaechi-chuks.github.io/COVID-19",
   "name": "covid-19",
   "version": "0.1.0",
   "private": true,
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
