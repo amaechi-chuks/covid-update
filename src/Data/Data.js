@@ -1,7 +1,8 @@
 import React from "react";
 import { useFetch } from "../Helper/hooks";
 import SimpleCards from "../Cards/Card";
-import MainBar from '../LoadingBar/mainLoadingBar';
+import Loader from '../LoadingBar/Loadng';
+import '../LoadingBar/LoadingBar.css'
 import "./data.css";
 
 function Data() {
@@ -19,10 +20,12 @@ function Data() {
   ));
   return (
     <div>
-      <h2>Global COVID-19 Realtime Update</h2>
+      <h2>COVID-19 Update</h2>
       <div className="main-container">
         {loading ? (
-          <MainBar />
+          <div className="spinner">
+          <Loader />
+          </div>
         ) : (
           <div>{listOfCOVID}</div>
         )}

@@ -1,21 +1,12 @@
-import * as React from 'react';
+import React from 'react';
+import './LoadingBar.css';
 
-import "./LoadingBar.css"
+const Loader = () => {
+  return (
+    <div className="loader-container">
+      <p className="loader" />
+    </div>
+  );
+};
 
-
- const LoadingBar =  ({width, percent}) => {
-  
-    let loading= percent * width;
-
-    const [value, setValue] = React.useState(0);
-
-    React.useEffect(() => {
-      setValue(percent * width);
-    });
-    return (
-      <div className="progress-div" style={{width: width}}>
-           <div style={{width: `${loading}px`}} className="progress"/>
-      </div>
-    )
-}
-export default LoadingBar
+export default Loader;
