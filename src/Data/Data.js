@@ -1,6 +1,7 @@
 import React from "react";
 import { useFetch } from "../Helper/hooks";
 import SimpleCards from "../Cards/Card";
+import MainBar from '../LoadingBar/mainLoadingBar';
 import "./data.css";
 
 function Data() {
@@ -21,7 +22,7 @@ function Data() {
       <h2>Global COVID-19 Realtime Update</h2>
       <div className="main-container">
         {loading ? (
-          <p className="loading">Loading......</p>
+          <MainBar />
         ) : (
           <div>{listOfCOVID}</div>
         )}
