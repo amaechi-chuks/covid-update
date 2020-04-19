@@ -51,7 +51,6 @@ export default function SimpleCards({
   deceased,
   lastUpdatedSource,
 }) {
-  console.log(lastUpdatedSource, 'lastupdated')
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 

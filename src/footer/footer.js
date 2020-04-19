@@ -8,7 +8,7 @@ const Footer = () => (
         Copyright &copy;
         {new Date().getFullYear()}
         &nbsp; COVID-19 Application
-        &nbsp; by Amaechi Chuks
+        &nbsp;by Chuks
       </div>
                 
             </div>
