@@ -1,6 +1,6 @@
 import React from "react";
-import { useFetch } from "./hooks";
-import SimpleCards from "./Card";
+import { useFetch } from "../Helper/hooks";
+import SimpleCards from "../Cards/Card";
 import "./data.css";
 
 function Data() {

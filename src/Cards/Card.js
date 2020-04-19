@@ -51,6 +51,7 @@ export default function SimpleCards({
   deceased,
   lastUpdatedSource,
 }) {
+  console.log(lastUpdatedSource, 'lastupdated')
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -516,6 +517,8 @@ export default function SimpleCards({
     let output = month + "\n" + day + "," + year;
     return output;
   };
+ 
+  lastUpdatedSource = daysFunction();
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -560,7 +563,7 @@ export default function SimpleCards({
           Death: {deceased}
         </Typography>
         <Typography variant="body2" component="p">
-          Time: {lastUpdatedSource}
+          Updated: {lastUpdatedSource}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

@@ -1,5 +1,6 @@
 import React from "react";
-import Data from "./Data";
+import Data from "./Data/Data";
+import Footer from './footer/footer';
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div class="flex-container"></div>
       <header className="App-header">
         <Data />
+        <Footer />
       </header>
     </div>
   );
