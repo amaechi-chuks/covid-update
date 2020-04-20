@@ -3,8 +3,8 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "logo192.png",
-      "type": "image/jpeg",
+      "src": "https://res.cloudinary.com/duzpmyphv/image/upload/v1587343606/politico/ues3rluymoiuocivxpyb.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
