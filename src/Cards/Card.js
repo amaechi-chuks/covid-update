@@ -557,9 +557,9 @@ export default function SimpleCards({
           className={classes.pos}
           variant="h5"
           component="h2"
-          color="textSecondary"
+          
         >
-          Death: {deceased}
+          Death: <span style={{color: "red"}}>{deceased}</span>
         </Typography>
         <Typography variant="body2" component="p">
           Updated: {lastUpdatedSource}

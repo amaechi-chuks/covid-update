@@ -5,10 +5,9 @@ const Footer = () => (
     <footer>
     <div className="footer">
             <div className="sub-footer">
-        Copyright &copy;
-        {new Date().getFullYear()}
-        &nbsp; COVID-19 Application
-        &nbsp;by Chuks
+         &copy;&nbsp;
+         {new Date().getFullYear()}
+        &nbsp; Chuks. &nbsp;ALL RIGHTS RESERVED
       </div>
                 
             </div>

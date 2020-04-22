@@ -15,6 +15,7 @@ footer {
     line-height: 23px; 
   }
  .sub-footer {
-    margin: 25px;
+    margin: 36px;
+    font-size: small;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
