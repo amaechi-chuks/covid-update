@@ -23,7 +23,7 @@ body {
     text-align: center;
     font-family: arial;
     color: #4a4242;
-    margin: 0 2;
+    margin: 30px;
     padding: 0;
   }
 
@@ -33,4 +33,25 @@ body {
     .flex-container {
       display: flex;
       flex-wrap: wrap; }
-    
+
+      /* @media screen and (min-width: 300px) {
+        .talk {
+          margin-left: 39px;
+        }
+      } */
+      @media screen and (min-width: 600px) {
+        .talk {
+          margin-left: 39px;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .talk {
+          margin-left: 39px;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        .talk {
+          margin-left: 39px;
+        }
+      }
