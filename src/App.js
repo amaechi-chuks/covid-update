@@ -3,6 +3,7 @@ import axios from "axios";
 import ReactPaginate from "react-paginate";
 import SimpleCards from "./Cards/Card";
 import Footer from "./footer/footer";
+// import SearchBar from './SearchBar/SearchBar'
 import Loader from './LoadingBar/Loadng';
 import './LoadingBar/LoadingBar.css';
 import "./Data/data.css";
@@ -72,7 +73,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div class="flex-container"></div>
+        <div className="flex-container"></div>
         <header className="App-header">
         <h2>COVID-19 Update</h2>
         {this.state.loading === true ? (
@@ -80,9 +81,13 @@ export default class App extends Component {
           <Loader />
           </div>
         ) : (
-          <div className="talk">
-        {this.state.postData}
-        </div>
+         <div>
+         {/* <SearchBar /> */}
+         <div className="talk">
+          
+          {this.state.postData}
+          </div>
+         </div>
          
         
         )}

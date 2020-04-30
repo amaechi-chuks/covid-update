@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -54,7 +54,7 @@ export default function SimpleCards({
 }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
+  const [count, setCount] = useState(0);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -128,8 +128,9 @@ export default function SimpleCards({
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+      <div>{count}</div>
+        <IconButton aria-label="add to favorites" >
+          <FavoriteIcon onClick={()=> setCount(count + 1)}/>
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
