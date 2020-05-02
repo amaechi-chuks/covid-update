@@ -5,3 +5,7 @@
     box-shadow: none;
     text-align: center;
 }
+p {
+    color: red;
+    background-color: green;
+}

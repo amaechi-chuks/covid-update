@@ -25,11 +25,11 @@ export default class App extends Component {
   receivedData() {
     axios
       .get(
-        "https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true."
+        "https://api.quarantine.country/api/v1/summary/latest"
       )
       .then((res) => {
         const data = res.data;
-        const slice = data.slice(
+        const slice = Object.entries(data.data.regions).slice(
           this.state.offset,
           this.state.offset + this.state.perPage
         );
@@ -37,16 +37,21 @@ export default class App extends Component {
           <React.Fragment>
             <SimpleCards
               key={item.id}
-              country={item.country}
-              infected={item.infected}
-              deceased={item.deceased}
-              lastUpdatedSource={item.lastUpdatedSource}
+              name={item[1].name}
+              total_cases={item[1].total_cases}
+              active_cases={item[1].active_cases}
+              tested={item[1].tested}
+              critical={item[1].critical}
+              recovered={item[1].recovered}
+              deaths={item[1].deaths}
+              death_ratio={item[1].death_ratio}
+              recovery_ratio={item[1].recovery_ratio}
             />
           </React.Fragment>
         ));
 
         this.setState({
-          pageCount: Math.ceil(data.length / this.state.perPage),
+          pageCount: Math.ceil(Object.entries(data.data.regions).length / this.state.perPage),
           postData,
           loading: false
         });

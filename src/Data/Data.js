@@ -9,11 +9,14 @@ function Data() {
   const [data, loading] = useFetch(
     "https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true."
   );
+  console.log(data.tested, 'tested');
   const listOfCOVID = data.map((item) => (
     <SimpleCards
       key={item.id}
       country={item.country}
       infected={item.infected}
+      tested={item.tested}
+      recovered={item.recovered}
       deceased={item.deceased}
       lastUpdatedSource={item.lastUpdatedSource}
     />

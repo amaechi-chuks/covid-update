@@ -47,10 +47,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SimpleCards({
-  country,
-  infected,
-  deceased,
-  lastUpdatedSource,
+  name,
+  total_cases,
+  active_cases,
+  tested,
+  critical,
+  recovered,
+  deaths,
+  death_ratio,
+  recovery_ratio,
+  // lastUpdatedSource,
 }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -81,7 +87,9 @@ export default function SimpleCards({
     return output;
   };
  
-  lastUpdatedSource = daysFunction();
+  let countryName = name.replace(/^./, name[0].toUpperCase());
+  let recovery_ratios = recovery_ratio.toFixed(4)
+  let death_ratios = death_ratio.toFixed(4)
   return (
     <Card className={classes.root}>
       <CardHeader
@@ -105,15 +113,27 @@ export default function SimpleCards({
         title="List Of Countries"
       />
       <CardContent>
-        {countryFlag(country)}
+        {countryFlag(name)}
         <Typography
           gutterBottom
           variant="h5" component="h2"
         >
-          {country}
+          {countryName}
         </Typography>
         <Typography variant="h5" component="h2">
-          Cases: {infected}
+          Cases: {total_cases}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Active_cases: {active_cases}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Critical: {critical}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Tested: {tested}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Recovered: <span style={{color: "green"}}>{recovered}</span>
         </Typography>
         <Typography
           className={classes.pos}
@@ -121,10 +141,14 @@ export default function SimpleCards({
           component="h2"
           
         >
-          Death: <span style={{color: "red"}}>{deceased}</span>
+          Death: <span style={{color: "red"}}>{deaths}</span>
         </Typography>
-        <Typography variant="body2" component="p">
-          Updated: {lastUpdatedSource}
+       
+        <Typography variant="h5" component="h2">
+          Death_ratio: {death_ratios}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          recovered_ratio: {recovery_ratios}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
