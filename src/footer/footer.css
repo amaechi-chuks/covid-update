@@ -1,9 +1,8 @@
 footer {
-    border-top: solid 1px #ffffff;
     height: 100px;
     width: 100%;
-    background: #4a4242;
-    box-shadow: 0 0 8px #cecdcd80;
+    color: #4a4242;
+    background: #efebe9;
 }
 .copyright {
     width: 80%;
@@ -11,11 +10,9 @@ footer {
     text-align: center;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
     line-height: 23px; 
   }
  .sub-footer {
     margin: 25px;
-    font-size: small;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
